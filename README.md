@@ -25,3 +25,5 @@ My first project using robot framework https://robotframework.org/
 ## Para rodar o projet, digite no terminal:
 <br>
  python -m robot "your file name"
+ <br>
+ Rodar tags:  robot -i SOMA ./variables.robot ou python -m robot -i SOMA ./variables.robot
