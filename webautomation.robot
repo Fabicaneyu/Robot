@@ -38,8 +38,10 @@ Então o produto deve ser apresentado com sucesso
     Page Should Contain Image    xpath=//img[@src=https://learningprime.com.br/spree/products/23/small/ror_bag.jpeg?1552494900]
     Sleep    5
 
+#cria um timeout padrão
 Abrir o meu navegador
     Open Browser    ${URL}    ${BROWSER}
+    Set Selenium Implicit Wait    30
     Maximize Browser Window
 
 Fechar navegador
