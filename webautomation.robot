@@ -9,12 +9,13 @@ Test Teardown        Fechar navegador
 
 
 *** Variables ***
-${URL}         https://robotframework.org/
+${URL}         https://learningprime.com.br/
 ${BROWSER}     chrome
 
 
 *** Test Cases ***
 Cenario: Buscando um roupa
+    [Tags]    BUSCA
     Dado que eu esteja na tela Home do site
     Quando pesquisar o produto 
     Então o produto deve ser apresentado com sucesso
@@ -22,6 +23,8 @@ Cenario: Buscando um roupa
 
 *** Keywords ***
 Dado que eu esteja na tela Home do site
+    Title Should Be   Learning Prime Store
+    Wait Until Element Is Visible    xpath=//*[contains(text(), "Comprar por categories")]        5
     
 
 Quando pesquisar o produto 

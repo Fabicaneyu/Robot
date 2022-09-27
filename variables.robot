@@ -38,10 +38,6 @@ Validar soma de dois números
     Somar o "464" mais o "464"
 
 *** Keywords ***
-
-
-
-
 Abrir o meu navegador
     Open Browser        ${URL}      ${BROWSER}
     Maximize Browser Window

@@ -28,7 +28,8 @@ My first project using robot framework https://robotframework.org/
  <br>
  Rodar tags:  robot -i SOMA ./variables.robot ou python -m robot -i SOMA ./variables.robot
  <br>
-
+ robot -i BUSCA webautomation.robot OU python -m robot -i BUSCA webautomation.robot
+<br>
  ## Setup e tierdown
  setup = antes do teste: 
  suite setup : o que vai acontecer antes de rodar todos os cenários 
