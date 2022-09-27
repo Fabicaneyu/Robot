@@ -4,6 +4,10 @@ Documentation    Aqui neste arquivo estarão presentes todos os tipos de variáv
 
 Library          SeleniumLibrary
 
+Test Setup        Abrir o meu navegador
+
+Test Teardown     Fechar navegador
+
 *** Variables ***
 # variável do tipo simples 
 ${NOME}        Fabi Canedo
@@ -26,18 +30,23 @@ ${BROWSER}    chrome
 *** Test Cases *** 
 Validar abertura do Browser
     Abrir o meu navegador
-    Fechar Browser
+    Fechar navegador
 
 Validar soma de dois números
     [Tags]        SOMA
     Somar dois números    100    200
+    Somar o "464" mais o "464"
 
 *** Keywords ***
+
+
+
+
 Abrir o meu navegador
     Open Browser        ${URL}      ${BROWSER}
     Maximize Browser Window
 
-Fechar Browser
+Fechar navegador
     Sleep    5
     Close Browser
 
