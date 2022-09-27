@@ -19,3 +19,9 @@ My first project using robot framework
 *** Test Cases ***
 <br>
 *** Keywords ***
+<br>
+<br>
+
+## Para rodar o projet, digite no terminal:
+<br>
+ python -m robot "your file name"
