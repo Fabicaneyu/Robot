@@ -24,12 +24,19 @@ Cenario: Buscando um roupa
 *** Keywords ***
 Dado que eu esteja na tela Home do site
     Title Should Be   Learning Prime Store
-    Wait Until Element Is Visible    xpath=//*[contains(text(), "Comprar por categories")]        5
+    Wait Until Element Is Visible    xpath=//*[contains(text(), "Comprar por Categories")]        5
     
-
+#click button apenas se no html ele for um buton 
 Quando pesquisar o produto 
+    Input Text    xpath=//input[@placeholder="Busca" and @type="search"]    Bag
+    Click Element    xpath=//*[@type="submit" and @value="Busca"]
 
+#validações de texto a keyword vai ter page contains
+#validação de elemento terá visible e is not visible
 Então o produto deve ser apresentado com sucesso
+    Wait Until Page Contains     Resultados de busca por "Bag"
+    Page Should Contain Image    xpath=//img[@src=https://learningprime.com.br/spree/products/23/small/ror_bag.jpeg?1552494900]
+    Sleep    5
 
 Abrir o meu navegador
     Open Browser    ${URL}    ${BROWSER}

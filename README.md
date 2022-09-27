@@ -37,3 +37,8 @@ My first project using robot framework https://robotframework.org/
 
  suite teardown = tudo que vai acontecer depois de rodar todos os cenários 
  test teardown = tudo que vai acontecer depois de cada teste da minha suite
+
+
+ ## Aprender XPATH 
+ https://www.macoratti.net/vb_xpath.htm
+ 
