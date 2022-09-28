@@ -1,105 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20220927 20:53:41.132" rpa="false" schemaversion="3">
-<suite id="s1" name="Webautomation" source="C:\Users\fabic\Documents\PHA Treinamento Setembro\webautomation.robot">
-<test id="s1-t1" name="Cenario: Buscando um roupa" line="17">
+<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20220927 21:05:33.250" rpa="false" schemaversion="3">
+<suite id="s1" name="Heldervariables" source="C:\Users\fabic\Documents\PHA Treinamento Setembro\heldervariables.robot">
+<test id="s1-t1" name="Validar abertura do Facebook" line="38">
 <kw name="Abrir o meu navegador" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220927 20:53:41.333" level="INFO">Opening browser 'chrome' to base url 'https://learningprime.com.br/'.</msg>
-<status status="PASS" starttime="20220927 20:53:41.333" endtime="20220927 20:53:47.054"/>
-</kw>
-<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
-<arg>30</arg>
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20220927 20:53:47.054" endtime="20220927 20:53:47.056"/>
+<msg timestamp="20220927 21:05:33.435" level="INFO">Opening browser 'chrome' to base url 'https://robotframework.org/'.</msg>
+<status status="PASS" starttime="20220927 21:05:33.435" endtime="20220927 21:05:39.134"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220927 20:53:47.056" endtime="20220927 20:53:47.172"/>
+<status status="PASS" starttime="20220927 21:05:39.134" endtime="20220927 21:05:39.259"/>
 </kw>
-<status status="PASS" starttime="20220927 20:53:41.332" endtime="20220927 20:53:47.173"/>
+<status status="PASS" starttime="20220927 21:05:33.435" endtime="20220927 21:05:39.259"/>
 </kw>
-<kw name="Dado que eu esteja na tela Home do site">
-<kw name="Title Should Be" library="SeleniumLibrary">
-<arg>Learning Prime Store</arg>
-<doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20220927 20:53:47.176" level="INFO">Page title is 'Learning Prime Store'.</msg>
-<status status="PASS" starttime="20220927 20:53:47.173" endtime="20220927 20:53:47.176"/>
+<kw name="Abrir o meu navegador">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220927 21:05:39.261" level="INFO">Opening browser 'chrome' to base url 'https://robotframework.org/'.</msg>
+<status status="PASS" starttime="20220927 21:05:39.260" endtime="20220927 21:05:42.877"/>
 </kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>xpath=//*[contains(text(), "Comprar por Categories")]</arg>
-<arg>5</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220927 20:53:47.177" endtime="20220927 20:53:47.198"/>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220927 21:05:42.877" endtime="20220927 21:05:42.992"/>
 </kw>
-<status status="PASS" starttime="20220927 20:53:47.173" endtime="20220927 20:53:47.198"/>
+<status status="PASS" starttime="20220927 21:05:39.260" endtime="20220927 21:05:42.992"/>
 </kw>
-<kw name="Quando pesquisar o produto">
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>xpath=//input[@placeholder="Busca" and @type="search"]</arg>
-<arg>Bag</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220927 20:53:47.199" level="INFO">Typing text 'Bag' into text field 'xpath=//input[@placeholder="Busca" and @type="search"]'.</msg>
-<status status="PASS" starttime="20220927 20:53:47.199" endtime="20220927 20:53:47.250"/>
+<kw name="Fechar navegador">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220927 21:05:43.146" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-26.png"&gt;&lt;img src="selenium-screenshot-26.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220927 21:05:42.993" endtime="20220927 21:05:43.146"/>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=//*[@type="submit" and @value="Busca"]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220927 20:53:47.250" level="INFO">Clicking element 'xpath=//*[@type="submit" and @value="Busca"]'.</msg>
-<status status="PASS" starttime="20220927 20:53:47.250" endtime="20220927 20:53:47.795"/>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220927 21:05:43.146" endtime="20220927 21:05:45.257"/>
 </kw>
-<status status="PASS" starttime="20220927 20:53:47.199" endtime="20220927 20:53:47.795"/>
-</kw>
-<kw name="Então o produto deve ser apresentado com sucesso">
-<kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<arg>Resultados de busca por "Bag"</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<msg timestamp="20220927 20:54:18.188" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-23.png"&gt;&lt;img src="selenium-screenshot-23.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20220927 20:54:18.188" level="FAIL">Text 'Resultados de busca por "Bag"' did not appear in 5 seconds.</msg>
-<status status="FAIL" starttime="20220927 20:53:47.796" endtime="20220927 20:54:18.189"/>
-</kw>
-<kw name="Page Should Contain Image" library="SeleniumLibrary">
-<arg>xpath=//img[@src=https://learningprime.com.br/spree/products/23/small/ror_bag.jpeg?1552494900]</arg>
-<doc>Verifies image identified by ``locator`` is found from current page.</doc>
-<status status="NOT RUN" starttime="20220927 20:54:18.190" endtime="20220927 20:54:18.190"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20220927 20:54:18.190" endtime="20220927 20:54:18.190"/>
-</kw>
-<status status="FAIL" starttime="20220927 20:53:47.796" endtime="20220927 20:54:18.190"/>
+<status status="PASS" starttime="20220927 21:05:42.993" endtime="20220927 21:05:45.257"/>
 </kw>
 <kw name="Fechar navegador" type="TEARDOWN">
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20220927 20:54:18.300" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-24.png"&gt;&lt;img src="selenium-screenshot-24.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20220927 20:54:18.191" endtime="20220927 20:54:18.300"/>
+<msg timestamp="20220927 21:05:45.261" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="PASS" starttime="20220927 21:05:45.261" endtime="20220927 21:05:45.262"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220927 20:54:18.300" endtime="20220927 20:54:20.393"/>
+<status status="PASS" starttime="20220927 21:05:45.262" endtime="20220927 21:05:45.262"/>
 </kw>
-<status status="PASS" starttime="20220927 20:54:18.191" endtime="20220927 20:54:20.393"/>
+<status status="PASS" starttime="20220927 21:05:45.260" endtime="20220927 21:05:45.263"/>
 </kw>
-<tag>BUSCA</tag>
-<status status="FAIL" starttime="20220927 20:53:41.332" endtime="20220927 20:54:20.394">Text 'Resultados de busca por "Bag"' did not appear in 5 seconds.</status>
+<tag>FACEBOOK</tag>
+<status status="PASS" starttime="20220927 21:05:33.434" endtime="20220927 21:05:45.264"/>
 </test>
 <doc>Aqui neste arquivo estaram presentes todos os tipos de
 variáveis que iremos estudar ao longo do treinamento.</doc>
-<status status="FAIL" starttime="20220927 20:53:41.134" endtime="20220927 20:54:20.396"/>
+<status status="PASS" starttime="20220927 21:05:33.251" endtime="20220927 21:05:45.268"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="0" fail="1" skip="0">BUSCA</stat>
+<stat pass="1" fail="0" skip="0">FACEBOOK</stat>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Webautomation">Webautomation</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Heldervariables">Heldervariables</stat>
 </suite>
 </statistics>
 <errors>
