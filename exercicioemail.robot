@@ -19,7 +19,7 @@ Validar EMAIL
 
 *** Keywords ***
 Montar email
-    [Arguments]    ${Nome}    ${Sobrenome}    ${Idade}    ${Resto}
+    [Arguments]    '${Nome}'    '${Sobrenome}'    '${Idade}'    '${Resto}'
     ${EMAIL}        Evaluate    ${Nome}${Sobrenome}${Idade}${Resto}
     Log To Console    ${EMAIL}
 

@@ -20,8 +20,25 @@ Cenario: Buscando um roupa
     Quando pesquisar o produto 
     Então o produto deve ser apresentado com sucesso
 
+Cenario: Buscar Mug com sucesso
+    [Tags]    BUSCA
+    Dado que eu esteja na tela Home do site
+    Quando pesquisar por Mug
+    Então o Mug deve ser apresentado com sucesso
+
 
 *** Keywords ***
+
+Quando pesquisar por Mug
+    Input Text    xpath=//input[@placeholder="Busca" and @type="search"]    Mug
+    Click Element    xpath=//*[@type="submit" and @value="Busca"]
+
+Então o Mug deve ser apresentado com sucesso
+    Wait Until Page Contains     Resultados de busca por 'Mug'
+    Page Should Contain Image    xpath=//img[@src='/spree/products/27/small/ror_mug.jpeg?1552494901']
+    Sleep    5
+
+
 Dado que eu esteja na tela Home do site
     Title Should Be   Learning Prime Store
     Wait Until Element Is Visible    xpath=//*[contains(text(), "Comprar por Categories")]        5
@@ -41,7 +58,7 @@ Então o produto deve ser apresentado com sucesso
 #cria um timeout padrão
 Abrir o meu navegador
     Open Browser    ${URL}    ${BROWSER}
-    Set Selenium Implicit Wait    30
+    Set Selenium Implicit Wait    10
     Maximize Browser Window
 
 Fechar navegador

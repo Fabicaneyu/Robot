@@ -41,4 +41,15 @@ My first project using robot framework https://robotframework.org/
 
  ## Aprender XPATH 
  https://www.macoratti.net/vb_xpath.htm
- 
+ Live muito boa explicando sobre XPath e CSS: https://www.youtube.com/watch?v=ZSAglCvKy9g&ab_channel=Iterasys
+ <br>
+ <br>
+
+ ## Automação 
+ kyte.com.br
+https://www.saucedemo.com/
+http://www.aprendendotestar.com.br/treinar-automacao.php
+http://4alltests.com.br/
+https://testautomationu.applitools.com/
+https://opensource-demo.orangehrmlive.com/
+https://woocommerce.com/?aff=43279&cid=8781674

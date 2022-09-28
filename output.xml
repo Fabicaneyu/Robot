@@ -1,42 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20220928 12:43:53.077" rpa="false" schemaversion="3">
-<suite id="s1" name="Exercicioemail" source="C:\Users\fabic\Documents\PHA Treinamento Setembro\exercicioemail.robot">
-<test id="s1-t1" name="Validar EMAIL" line="16">
-<kw name="Montar email">
-<arg>fabi</arg>
-<arg>_canedo</arg>
-<arg>_25</arg>
-<arg>@robot.com</arg>
-<kw name="Evaluate" library="BuiltIn">
-<var>${EMAIL}</var>
-<arg>${Nome}${Sobrenome}${Idade}${Resto}</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20220928 12:43:53.260" level="FAIL">Evaluating expression 'fabi_canedo_25@robot.com' failed: NameError: name 'fabi_canedo_25' is not defined nor importable as module</msg>
-<status status="FAIL" starttime="20220928 12:43:53.259" endtime="20220928 12:43:53.262"/>
+<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20220928 20:09:47.386" rpa="false" schemaversion="3">
+<suite id="s1" name="Webautomation" source="c:\Users\fabic\Documents\PHA Treinamento Setembro\webautomation.robot">
+<test id="s1-t1" name="Cenario: Buscar Mug com sucesso" line="23">
+<kw name="Abrir o meu navegador" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220928 20:09:47.638" level="INFO">Opening browser 'chrome' to base url 'https://learningprime.com.br/'.</msg>
+<status status="PASS" starttime="20220928 20:09:47.638" endtime="20220928 20:09:54.011"/>
 </kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${EMAIL}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" starttime="20220928 12:43:53.262" endtime="20220928 12:43:53.262"/>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20220928 20:09:54.011" endtime="20220928 20:09:54.012"/>
 </kw>
-<status status="FAIL" starttime="20220928 12:43:53.259" endtime="20220928 12:43:53.263"/>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220928 20:09:54.012" endtime="20220928 20:09:54.128"/>
 </kw>
-<tag>EMAIL</tag>
-<status status="FAIL" starttime="20220928 12:43:53.252" endtime="20220928 12:43:53.264">Evaluating expression 'fabi_canedo_25@robot.com' failed: NameError: name 'fabi_canedo_25' is not defined nor importable as module</status>
+<status status="PASS" starttime="20220928 20:09:47.637" endtime="20220928 20:09:54.128"/>
+</kw>
+<kw name="Dado que eu esteja na tela Home do site">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Learning Prime Store</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20220928 20:09:54.135" level="INFO">Page title is 'Learning Prime Store'.</msg>
+<status status="PASS" starttime="20220928 20:09:54.129" endtime="20220928 20:09:54.135"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//*[contains(text(), "Comprar por Categories")]</arg>
+<arg>5</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220928 20:09:54.135" endtime="20220928 20:09:54.201"/>
+</kw>
+<status status="PASS" starttime="20220928 20:09:54.128" endtime="20220928 20:09:54.201"/>
+</kw>
+<kw name="Quando pesquisar por Mug">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@placeholder="Busca" and @type="search"]</arg>
+<arg>Mug</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220928 20:09:54.202" level="INFO">Typing text 'Mug' into text field 'xpath=//input[@placeholder="Busca" and @type="search"]'.</msg>
+<status status="PASS" starttime="20220928 20:09:54.202" endtime="20220928 20:09:54.255"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@type="submit" and @value="Busca"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220928 20:09:54.256" level="INFO">Clicking element 'xpath=//*[@type="submit" and @value="Busca"]'.</msg>
+<status status="PASS" starttime="20220928 20:09:54.256" endtime="20220928 20:09:54.797"/>
+</kw>
+<status status="PASS" starttime="20220928 20:09:54.202" endtime="20220928 20:09:54.798"/>
+</kw>
+<kw name="Então o Mug deve ser apresentado com sucesso">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Resultados de busca por 'Mug'</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<msg timestamp="20220928 20:10:05.155" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-27.png"&gt;&lt;img src="selenium-screenshot-27.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220928 20:10:05.156" level="FAIL">Text 'Resultados de busca por 'Mug'' did not appear in 5 seconds.</msg>
+<status status="FAIL" starttime="20220928 20:09:54.799" endtime="20220928 20:10:05.169"/>
+</kw>
+<kw name="Page Should Contain Image" library="SeleniumLibrary">
+<arg>xpath=//img[@src='/spree/products/27/small/ror_mug.jpeg?1552494901']</arg>
+<doc>Verifies image identified by ``locator`` is found from current page.</doc>
+<status status="NOT RUN" starttime="20220928 20:10:05.169" endtime="20220928 20:10:05.170"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20220928 20:10:05.170" endtime="20220928 20:10:05.170"/>
+</kw>
+<status status="FAIL" starttime="20220928 20:09:54.798" endtime="20220928 20:10:05.170"/>
+</kw>
+<kw name="Fechar navegador" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220928 20:10:05.287" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-28.png"&gt;&lt;img src="selenium-screenshot-28.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220928 20:10:05.171" endtime="20220928 20:10:05.287"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220928 20:10:05.287" endtime="20220928 20:10:07.395"/>
+</kw>
+<status status="PASS" starttime="20220928 20:10:05.171" endtime="20220928 20:10:07.396"/>
+</kw>
+<tag>BUSCA</tag>
+<status status="FAIL" starttime="20220928 20:09:47.635" endtime="20220928 20:10:07.396">Text 'Resultados de busca por 'Mug'' did not appear in 5 seconds.</status>
 </test>
 <doc>Aqui neste arquivo estaram presentes todos os tipos de
 variáveis que iremos estudar ao longo do treinamento.</doc>
-<status status="FAIL" starttime="20220928 12:43:53.093" endtime="20220928 12:43:53.265"/>
+<status status="FAIL" starttime="20220928 20:09:47.391" endtime="20220928 20:10:07.398"/>
 </suite>
 <statistics>
 <total>
 <stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="0" fail="1" skip="0">EMAIL</stat>
+<stat pass="0" fail="1" skip="0">BUSCA</stat>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Exercicioemail">Exercicioemail</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Webautomation">Webautomation</stat>
 </suite>
 </statistics>
 <errors>
