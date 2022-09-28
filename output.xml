@@ -1,20 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20220928 00:31:40.323" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20220928 12:43:53.077" rpa="false" schemaversion="3">
 <suite id="s1" name="Exercicioemail" source="C:\Users\fabic\Documents\PHA Treinamento Setembro\exercicioemail.robot">
-<test id="s1-t1" name="Validar soma de dois números" line="16">
+<test id="s1-t1" name="Validar EMAIL" line="16">
 <kw name="Montar email">
 <arg>fabi</arg>
 <arg>_canedo</arg>
-<arg>_30</arg>
-<msg timestamp="20220928 00:31:40.691" level="FAIL">Keyword 'Montar email' expected 4 arguments, got 3.</msg>
-<status status="FAIL" starttime="20220928 00:31:40.691" endtime="20220928 00:31:40.691"/>
+<arg>_25</arg>
+<arg>@robot.com</arg>
+<kw name="Evaluate" library="BuiltIn">
+<var>${EMAIL}</var>
+<arg>${Nome}${Sobrenome}${Idade}${Resto}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220928 12:43:53.260" level="FAIL">Evaluating expression 'fabi_canedo_25@robot.com' failed: NameError: name 'fabi_canedo_25' is not defined nor importable as module</msg>
+<status status="FAIL" starttime="20220928 12:43:53.259" endtime="20220928 12:43:53.262"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${EMAIL}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220928 12:43:53.262" endtime="20220928 12:43:53.262"/>
+</kw>
+<status status="FAIL" starttime="20220928 12:43:53.259" endtime="20220928 12:43:53.263"/>
 </kw>
 <tag>EMAIL</tag>
-<status status="FAIL" starttime="20220928 00:31:40.691" endtime="20220928 00:31:40.696">Keyword 'Montar email' expected 4 arguments, got 3.</status>
+<status status="FAIL" starttime="20220928 12:43:53.252" endtime="20220928 12:43:53.264">Evaluating expression 'fabi_canedo_25@robot.com' failed: NameError: name 'fabi_canedo_25' is not defined nor importable as module</status>
 </test>
 <doc>Aqui neste arquivo estaram presentes todos os tipos de
 variáveis que iremos estudar ao longo do treinamento.</doc>
-<status status="FAIL" starttime="20220928 00:31:40.327" endtime="20220928 00:31:40.699"/>
+<status status="FAIL" starttime="20220928 12:43:53.093" endtime="20220928 12:43:53.265"/>
 </suite>
 <statistics>
 <total>

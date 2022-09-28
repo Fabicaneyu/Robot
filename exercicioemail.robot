@@ -8,19 +8,19 @@ Library              SeleniumLibrary
 &{EMAIL}        
 ...            Nome=Fabi    
 ...            Sobrenome=Canedo    
-...            Idade=30    
+...            Idade=25    
 ...            Resto=@robot.com
 
 
 *** Test Cases ***
-Validar soma de dois números
+Validar EMAIL
     [Tags]        EMAIL
-    Montar email    fabi    _canedo    _30
+    Montar email    fabi    _canedo    _25    @robot.com
 
 *** Keywords ***
 Montar email
     [Arguments]    ${Nome}    ${Sobrenome}    ${Idade}    ${Resto}
-    ${EMAIL}        Evaluate    ${NOME}&${SOBRENOME}&${IDADE}&${RESTO}
+    ${EMAIL}        Evaluate    ${Nome}${Sobrenome}${Idade}${Resto}
     Log To Console    ${EMAIL}
 
 
